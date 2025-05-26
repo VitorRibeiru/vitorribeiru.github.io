@@ -17,14 +17,14 @@ export default function Home() {
           {/* text */}
           <div className="text-center xl:text-left">  
             <h1 className="h1 mb-6">
-              Hello I'm <br /> <span className="text-accent"> Vitor Ribeiro</span>
+              Olá!Sou <br /> <span className="text-accent"> Vitor Ribeiro</span>
             </h1>      
-          </div>
-          <p className="max-w-[550px] mb-9 text-white/80">
-          Eu amo a tecnologia e as coisas que ela nos permite fazer.
-          Apaixonado por jogos e café! Determinado a contribuir positivamente para o mundo!</p>
-          {/* cv and socials btn */}
-          <div className="flex flex-col xl:flex-row items-center gap-8">
+            <p className="max-w-[550px] mb-9 text-white/80">
+            Amo a tecnologia e as coisas que ela nos permite fazer.
+            Apaixonado por jogos e café! Determinado a contribuir positivamente para o mundo!</p>
+
+            {/* btn and socials */}
+            <div className="flex flex-col xl:flex-row items-center gap-8">              
             <Button 
               variant="outline"
               size="lg"
@@ -33,7 +33,8 @@ export default function Home() {
               <span>Download CV</span>
               <FiDownload className="text-xl" />
             </Button>
-            <div>< Social 
+            <div className="mb-8 xl:mb-0">
+            < Social 
             containerStyles="flex gap-6" 
             iconStyles="w-9 h-9 border border-accent
             rounded-full flex justify-center items-center 
@@ -42,10 +43,13 @@ export default function Home() {
             duration-500" 
             />
             </div>
-          </div>          
+          </div> 
+          </div>
+          
+                   
           { /* photo */}
           <Photo />
-            <Jobs />    
+           {/* <Jobs /> */}   
         </div>
        </div>
     </section>
