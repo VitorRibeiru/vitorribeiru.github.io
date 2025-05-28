@@ -15,10 +15,13 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row items-center justify-between 
         xl:pt-8 xl:pb-24">
           {/* text */}
-          <div className="text-center xl:text-left">  
-            <h1 className="h1 mb-6">
+          <div className="text-center xl:text-left order-2 xl:order-none">  
+            <Jobs />   
+
+            <h1 className="h1 mb-4">
               Olá!Sou <br /> <span className="text-accent"> Vitor Ribeiro</span>
-            </h1>      
+            </h1> 
+              
             <p className="max-w-[550px] mb-9 text-white/80">
             Amo a tecnologia e as coisas que ela nos permite fazer.
             Apaixonado por jogos e café! Determinado a contribuir positivamente para o mundo!</p>
@@ -31,8 +34,13 @@ export default function Home() {
               className="uppercase flex items-center gap-2"
             >
               <span>Download CV</span>
+
               <FiDownload className="text-xl" />
+
             </Button>
+
+            
+
             <div className="mb-8 xl:mb-0">
             < Social 
             containerStyles="flex gap-6" 
@@ -42,14 +50,12 @@ export default function Home() {
             hover:text-primary hover:transition-all 
             duration-500" 
             />
+
             </div>
           </div> 
-          </div>
-          
-                   
+          </div>                        
           { /* photo */}
-          <Photo />
-           {/* <Jobs /> */}   
+          <Photo />             
         </div>
        </div>
     </section>

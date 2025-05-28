@@ -48,7 +48,7 @@ export const Jobs = () => {
   return (
     <section className="banner" id="home" style={{ textAlign: 'center', padding: '15px' }}>
       <h1 className="txt-rotate" style={{ fontSize: '1rem',  minHeight: '32px' }}>
-        <span className="wrap text-xl text-accent" >{text}</span>
+        <span className="wrap text-xl" >{text}</span>
       </h1>
     </section>
   );
