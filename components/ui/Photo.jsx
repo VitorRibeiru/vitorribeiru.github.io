@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Photo = () => {
   return (
-    <div className="w-1/2 h-full relative flex items-center justify-center">
+    <div className="w-1/2 h-full">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{

@@ -6,6 +6,7 @@ import { FiDownload } from "react-icons/fi";
 import Social from "@/components/ui/Social";
 import  Jobs  from "@/components/ui/Jobs";
 import Photo from "@/components/ui/Photo";
+import Stats from "@/components/ui/Stats";
 
 
 export default function Home() {
@@ -55,9 +56,12 @@ export default function Home() {
           </div> 
           </div>                        
           { /* photo */}
+          <div className="order-1 xl:order-none mb-8 xl:mb-0">
           <Photo />             
+          </div> 
         </div>
        </div>
+       <Stats />
     </section>
   );
 }
