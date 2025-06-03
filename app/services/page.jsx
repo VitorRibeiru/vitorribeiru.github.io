@@ -1,6 +1,6 @@
 "use client";
 
-import { BsArrowDownRight, bsArrowDownRight } from 'react-icons/bs'
+import { BsArrowDownRight } from 'react-icons/bs'
 import Link from "next/link";
 
 const services = [
@@ -8,25 +8,25 @@ const services = [
         num: "01",
         title: "Web Development",
         description: "Desenvolvimento de aplicações web modernas, responsivas e integradas. Criação de sistemas e sites personalizados com foco em performance, usabilidade e integração com APIs e bancos de dados. Entrego soluções completas, alinhadas às necessidades do cliente.",
-        href: ""
+        href: "https://wa.me/5524993133872?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portif%C3%B3lio.%20Gostaria%20de%20saber%20um%20pouco%20sobre%20seus%20servi%C3%A7os."
     },
     {
         num: "02",
         title: "Business Inteligence",
         description: "Consultoria em Business Intelligence e soluções orientadas por dados. Implantação de dashboards, modelagem de dados e automações com Power BI e outras ferramentas. Apoio estratégico na estruturação e análise de dados para empresas que buscam decisões mais assertivas.",
-        href: ""
+        href: "https://wa.me/5524993133872?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portif%C3%B3lio.%20Gostaria%20de%20saber%20um%20pouco%20sobre%20seus%20servi%C3%A7os."
     },
     {
         num: "03",
         title: "Game Development",
         description: "Desenvolvimento de jogos com foco em narrativa, mecânicas e experiência do usuário. Criação completa de protótipos e jogos para fins educacionais, gamificação ou entretenimento. Atuo no desenvolvimento de enredos, cenários, jogabilidade, personagens, criaturas e níveis de dificuldade.",
-        href: ""
+        href: "https://wa.me/5524993133872?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portif%C3%B3lio.%20Gostaria%20de%20saber%20um%20pouco%20sobre%20seus%20servi%C3%A7os."
     },
     {
         num: "04",
         title: "Aulas de Programação/BI",
         description: "Formação prática e personalizada em programação e Business Intelligence. Aulas para aqueles que desejam aprofundar conhecimentos em Programação, Automação, Power BI e outras ferramentas. Metodologia direta, com foco em aplicação real.",
-        href: ""
+        href: "https://wa.me/5524993133872?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portif%C3%B3lio.%20Gostaria%20de%20saber%20um%20pouco%20sobre%20seus%20servi%C3%A7os."
     },
 ]
 
@@ -56,14 +56,14 @@ const Services = () => {
                             href={service.href} 
                             className="w-[70px] h-[70px] rounded-full bg-white 
                             group-hover:bg-accent transition-all duration-500 flex 
-                            justify-center items-center hover:-rotate-45"
+                            justify-center items-center hover:-rotate-45" target="_blank"
                           >
-                            <BsArrowDownRight className="text-primary text-3xl"/>
+                            <BsArrowDownRight className="text-primary text-3xl" />
                           </Link>
                         </div>
                         {/*title*/}
                         <h2 className="text-[42px] font-bold leading-none text-white
-                        group-hover:text-accent transition-all duration-500">
+                        group-hover:text-accent transition-all">
                         {service.title}
                         </h2>
                         {/*description*/}
