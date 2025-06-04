@@ -6,8 +6,8 @@ import Link from "next/link";
 const services = [
     {
         num: "01",
-        title: "Web Development",
-        description: "Desenvolvimento de aplicações web modernas, responsivas e integradas. Criação de sistemas e sites personalizados com foco em performance, usabilidade e integração com APIs e bancos de dados. Entrego soluções completas, alinhadas às necessidades do cliente.",
+        title: "Process Automation (RPA)",
+        description: "Automatização de processos repetitivos e rotinas operacionais com Python. Desenvolvimento de scripts e bots para reduzir tarefas manuais, integrar sistemas e otimizar fluxos de trabalho. Soluções sob medida para aumentar produtividade e reduzir erros operacionais.",
         href: "https://wa.me/5524993133872?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portif%C3%B3lio.%20Gostaria%20de%20saber%20um%20pouco%20sobre%20seus%20servi%C3%A7os."
     },
     {
@@ -18,8 +18,8 @@ const services = [
     },
     {
         num: "03",
-        title: "Game Development",
-        description: "Desenvolvimento de jogos com foco em narrativa, mecânicas e experiência do usuário. Criação completa de protótipos e jogos para fins educacionais, gamificação ou entretenimento. Atuo no desenvolvimento de enredos, cenários, jogabilidade, personagens, criaturas e níveis de dificuldade.",
+        title: "Web Development",
+        description: "Desenvolvimento de aplicações web modernas, responsivas e integradas. Criação de sistemas e sites personalizados com foco em performance, usabilidade e integração com APIs e bancos de dados. Entrego soluções completas, alinhadas às necessidades do cliente.",
         href: "https://wa.me/5524993133872?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portif%C3%B3lio.%20Gostaria%20de%20saber%20um%20pouco%20sobre%20seus%20servi%C3%A7os."
     },
     {

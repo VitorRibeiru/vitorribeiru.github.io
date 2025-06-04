@@ -12,13 +12,14 @@ const stats = [
         text: "Projectos Desenvolvidos",
     },
     {
-        num: 8,
-        text: "Tecnologias Dominadas",
-    },
-    {
-        num: 80,
+        num: 78,
         text: "Problemas Resolvidos",
     },
+    {
+        num: 1,
+        text: "Milhão R$/ano Digital Saving",
+    },
+   
 ];
 
 const Stats = () => {
