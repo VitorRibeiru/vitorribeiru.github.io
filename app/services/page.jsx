@@ -6,13 +6,13 @@ import Link from "next/link";
 const services = [
     {
         num: "01",
-        title: "Process Automation (RPA)",
+        title: "Automação de Processos (RPA)",
         description: "Automatização de processos repetitivos e rotinas operacionais com Python. Desenvolvimento de scripts e bots para reduzir tarefas manuais, integrar sistemas e otimizar fluxos de trabalho. Soluções sob medida para aumentar produtividade e reduzir erros operacionais.",
         href: "https://wa.me/5524993133872?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portif%C3%B3lio.%20Gostaria%20de%20saber%20um%20pouco%20sobre%20seus%20servi%C3%A7os."
     },
     {
         num: "02",
-        title: "Business Inteligence",
+        title: "Business Inteligence (BI)",
         description: "Consultoria em Business Intelligence e soluções orientadas por dados. Implantação de dashboards, modelagem de dados e automações com Power BI e outras ferramentas. Apoio estratégico na estruturação e análise de dados para empresas que buscam decisões mais assertivas.",
         href: "https://wa.me/5524993133872?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portif%C3%B3lio.%20Gostaria%20de%20saber%20um%20pouco%20sobre%20seus%20servi%C3%A7os."
     },
