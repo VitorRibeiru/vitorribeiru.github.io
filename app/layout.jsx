@@ -1,6 +1,8 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
+
+
 // components
 import Header from "@/components/Header";
 import Nav from "@/components/Nav";
@@ -20,7 +22,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en">  
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+          rel="stylesheet"
+        />        
+      </head>
       <body className={jetbrainsMono.variable}>
         <Header />
         <StairTransition />
