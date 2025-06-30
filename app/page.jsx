@@ -20,7 +20,7 @@ export default function Home() {
             <Jobs />   
 
             <h1 className="h1 mb-4">
-              Olá!Sou <br /> <span className="text-accent"> Vitor Ribeiro</span>
+              Olá!Sou <br /> <span className="text-accent">Vitor Ribeiro</span>
             </h1> 
               
             <p className="max-w-[550px] mb-9 text-white/80">

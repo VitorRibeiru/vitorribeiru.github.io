@@ -11,6 +11,13 @@
   .container {
     @apply mx-auto px-[15px];
   }
+  .circle-animation {
+    stroke: #00ff99;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
 }
 
 @theme {
@@ -79,4 +86,6 @@
   .group:hover .text-outline {
     -webkit-text-stroke: 1px #00ff99; /* Muda só o contorno */
   }
+
+  
 }

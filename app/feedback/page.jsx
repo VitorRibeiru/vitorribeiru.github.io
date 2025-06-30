@@ -15,6 +15,7 @@ const reviews = [
     name: 'Douglas Borges',
     imgSrc: './assets/feedbackimgs/Douglas.jpeg',
     company: 'Diretor na Michelin (Site RM)',
+    words:"Proatividade, Adaptação, Liderança.",
     href: "https://www.linkedin.com/in/douglasvalenteborges",
   },
   {
@@ -22,6 +23,7 @@ const reviews = [
     name: 'Rodrigo Costa dos Santos',
     imgSrc: './assets/feedbackimgs/Rodrigo.jpeg',
     company: 'Responsável da Garantia e Obtensão da Qualidade na Michelin (Site RM)',
+    words:"Impacto, Inovação, Qualidade.",
     href: "https://www.linkedin.com/in/eng-rodrigocosta/",
   },
   {
@@ -29,6 +31,7 @@ const reviews = [
     name: 'Jaime Oliveira',
     imgSrc: './assets/feedbackimgs/Jaime.jpeg',
     company: 'Fundador da Reconhecer o Padrão (PT)',
+    words:"Desempenho, Organização, Iniciativa.",
     href: "https://www.linkedin.com/in/jaimenoliveira/",
   },  
   {
@@ -36,13 +39,15 @@ const reviews = [
     name: 'Diego Lopes',
     imgSrc: './assets/feedbackimgs/Diego.jpg',
     company: 'Dono na UTI do Celular',
+    words:"Agilidade, Exelência, Satisfação.",
     href: "",
   },
   {
     content: ' O Vitor é um professor extremamente inteligente, às vezes até difícil de acompanhar de tão rápido que ele pensa! Mas graças a ele, aprendi muita coisa: desde a criação de sites com HTML e CSS, até lógica de programação e automações com Python. Ele tem domínio do conteúdo e sempre busca formas práticas de ensinar. Foi uma experiência transformadora aprender com ele.',
-    name: 'Carol',
+    name: 'Carolina Gonçalves',
     imgSrc: './assets/feedbackimgs/Carol.png',
     company: 'Estudante de Sistemas de Informação',
+    words:"Conhecimento, Didática, Inspiração.",
     href: "",
   },
 ];
@@ -53,17 +58,20 @@ const Reviews = () => {
     className="section overflow-hidden flex-1 flex flex-col justify-center gap-6 group"
 >   
       <div className="container">
+        
         <h2 className="text-center text-5xl font-extrabold text-outline text-transparent group-hover:text-outline mb-5">
             Veja que os clientes dizem
         </h2>   
         
-        <div className=""> {/* flex items-stretch gap-3 w-fit */}
-            {reviews.map(({ content, name, imgSrc, company,href}, key) => (
+        <div className=""> 
+          {/* flex items-stretch gap-3 w-fit */}
+            {reviews.map(({ content, name, imgSrc, company,words,href}, key) => (
                 <ReviewCard
                  key={key}
                  name={name}
                  imgSrc={imgSrc}
                  company={company}
+                 words={words}
                  content={content}
                  href={href} 
                 />

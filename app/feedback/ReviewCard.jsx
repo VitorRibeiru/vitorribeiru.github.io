@@ -21,11 +21,12 @@ const ReviewCard = ({
     imgSrc,
     name,
     company,
+    words,
     href,
 }) => {
 
     return (
-        <div className="relative bg-zinc-800  p-5 rounded-xl min-h-[320px] flex flex-col lg:min-w-[420px] mb-5">  
+        <div className="relative bg-zinc-800  p-5 rounded-xl flex flex-col lg:min-w-[420px] mb-5">  
         <Link 
                             href={href} 
                             className="absolute top-2 right-2 text-white text-2xl w-[50px] h-[50px] rounded-full bg-white 
@@ -34,7 +35,7 @@ const ReviewCard = ({
                             <BsArrowDownRight className="text-primary text-3xl " />
                           </Link>
 
-            <div className="flex items-center gap-2 mt-auto mb-1">
+            <div className="flex items-center gap-2 mt-0 mb-0">
                 
                 <figure className="img-box rounded-lg ">
                     <img
@@ -63,15 +64,17 @@ const ReviewCard = ({
                         {company}
                     </p>
                     
+                    
                 </div>
                 
             </div>
-
+            
             
 
-            <p className="text-zinc-400 mb-8">
+            <p className="text-zinc-400 mb-1">
                 {content}
             </p>
+            <p className=" text-xs text-accent tracking-wider">{words}</p>
         </div>
     )
 }
