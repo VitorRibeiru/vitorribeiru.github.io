@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const isGithubPages = process.env.DEPLOY_TARGET === 'GH_PAGES';
 
-export default nextConfig;
+const nextConfig = {
+  output: 'export',
+  basePath: isGithubPages ? '/vitorribeiru.github.io' : '',
+  images: {
+    unoptimized: true,
+  },
+};
+
+module.exports = nextConfig;
