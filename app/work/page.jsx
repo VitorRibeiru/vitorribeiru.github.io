@@ -40,7 +40,7 @@ const projects = [
             "Aplicativo para gestão de equipamentos de incêndio com Microsoft Power Apps e Power BI, focado em inspeções, controle e análise em tempo real. A solução permite o cadastro e checklist digital dos equipamentos, registro de não conformidades, além de dashboards interativos para tomada de decisão. Todos os dados são armazenados em banco seguro e estruturado, garantindo segurança, rastreabilidade e alta disponibilidade da informação, substituindo processos manuais por uma gestão digital, eficiente e em conformidade com as normas de segurança.",
         stack: [{ name: "PowerApps" }, { name: "Power BI" },{ name: "Sharepoint" }],
         imagem: "/assets/work/firetrack.png",
-        live: "",
+        live: "https://www.linkedin.com/posts/jvitor-ribeiro_powerapps-powerbi-seguranaexadotrabalho-activity-7344179713789034496-a_w9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADgWFvoBtNHHxaysw4WvZRdEaGNTXiamsM4",
         github: "",
     },
     {

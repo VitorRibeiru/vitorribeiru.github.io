@@ -7,6 +7,7 @@
 
 "use client";
 
+import { motion } from "framer-motion";
 import ReviewCard from "./ReviewCard";
 
 const reviews = [
@@ -15,7 +16,7 @@ const reviews = [
     name: 'Douglas Borges',
     imgSrc: './assets/feedbackimgs/Douglas.jpeg',
     company: 'Diretor na Michelin (Site RM)',
-    words:"Proatividade, Adaptação, Liderança.",
+    words: "Proatividade, Adaptação, Liderança.",
     href: "https://www.linkedin.com/in/douglasvalenteborges",
   },
   {
@@ -23,7 +24,7 @@ const reviews = [
     name: 'Rodrigo Costa dos Santos',
     imgSrc: './assets/feedbackimgs/Rodrigo.jpeg',
     company: 'Responsável da Garantia e Obtensão da Qualidade na Michelin (Site RM)',
-    words:"Impacto, Inovação, Qualidade.",
+    words: "Impacto, Inovação, Qualidade.",
     href: "https://www.linkedin.com/in/eng-rodrigocosta/",
   },
   {
@@ -31,15 +32,15 @@ const reviews = [
     name: 'Jaime Oliveira',
     imgSrc: './assets/feedbackimgs/Jaime.jpeg',
     company: 'Fundador da Reconhecer o Padrão (PT)',
-    words:"Desempenho, Organização, Iniciativa.",
+    words: "Desempenho, Organização, Iniciativa.",
     href: "https://www.linkedin.com/in/jaimenoliveira/",
-  },  
+  },
   {
     content: 'O Vitor foi excepcional no desenvolvimento do site da minha loja de assistência técnica e acessórios. Ele entendeu exatamente o que eu precisava, entregou tudo com agilidade e o resultado final superou minhas expectativas. O site ficou moderno, funcional e alinhado com tudo o que foi combinado. Recomendo de olhos fechados!',
     name: 'Diego Lopes',
     imgSrc: './assets/feedbackimgs/Diego.jpg',
     company: 'Dono na UTI do Celular',
-    words:"Agilidade, Exelência, Satisfação.",
+    words: "Agilidade, Exelência, Satisfação.",
     href: "",
   },
   {
@@ -47,41 +48,50 @@ const reviews = [
     name: 'Carolina Gonçalves',
     imgSrc: './assets/feedbackimgs/Carol.png',
     company: 'Estudante de Sistemas de Informação',
-    words:"Conhecimento, Didática, Inspiração.",
+    words: "Conhecimento, Didática, Inspiração.",
     href: "",
   },
 ];
 
 const Reviews = () => {
   return (
-    <section id="reviews" 
-    className="section overflow-hidden flex-1 flex flex-col justify-center gap-6 group"
->   
-      <div className="container">
-        
-        <h2 className="text-center text-5xl font-extrabold text-outline text-transparent group-hover:text-outline mb-5">
+
+    <section id="reviews"
+      className="section overflow-hidden flex-1 flex flex-col justify-center gap-6 group"
+    >
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        }}
+        className="py-6"
+      >
+        <div className="container">
+
+          <h2 className="text-center text-5xl font-extrabold text-outline text-transparent group-hover:text-outline mb-5">
             Veja que os clientes dizem
-        </h2>   
-        
-        <div className=""> 
-          {/* flex items-stretch gap-3 w-fit */}
-            {reviews.map(({ content, name, imgSrc, company,words,href}, key) => (
-                <ReviewCard
-                 key={key}
-                 name={name}
-                 imgSrc={imgSrc}
-                 company={company}
-                 words={words}
-                 content={content}
-                 href={href} 
-                />
+          </h2>
+
+          <div className="">
+            {/* flex items-stretch gap-3 w-fit */}
+            {reviews.map(({ content, name, imgSrc, company, words, href }, key) => (
+              <ReviewCard
+                key={key}
+                name={name}
+                imgSrc={imgSrc}
+                company={company}
+                words={words}
+                content={content}
+                href={href}
+              />
             ))}
+          </div>
+
         </div>
 
-      </div>
-
-</section>
-    
+      </motion.section>
+    </section>
 
   )
 }
