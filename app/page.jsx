@@ -29,17 +29,19 @@ export default function Home() {
 
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">              
+            <a href="public/assets/cv-vitor-ribeiro.pdf" download>
             <Button 
               variant="outline"
               size="lg"
-              className="uppercase flex items-center gap-2"
+              className="uppercase flex items-center gap-2 cursor-pointer"
             >
+              
               <span>Download CV</span>
 
               <FiDownload className="text-xl" />
 
             </Button>
-
+            </a>
             
 
             <div className="mb-8 xl:mb-0">
