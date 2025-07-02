@@ -29,7 +29,7 @@ export default function Home() {
 
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">              
-            <a href="public/assets/cv-vitor-ribeiro.pdf" download>
+            <a href="./public/assets/cv-vitor-ribeiro.pdf" download>
             <Button 
               variant="outline"
               size="lg"
