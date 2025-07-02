@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "deploy": "DEPLOY_TARGET=GH_PAGES npm run build && npm run export",
+    "deploy": "DEPLOY_TARGET=GH_PAGES next build && next export && gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },
