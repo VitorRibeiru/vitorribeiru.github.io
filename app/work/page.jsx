@@ -28,7 +28,7 @@ const projects = [
         title: "RELEASE FUNCTION",
         description: (<>Aplicação desenvolvida com Power Apps e base de dados no SharePoint, que inovou o processo de controle, bloqueio e liberação de produtos da usina, trazendo mais segurança, agilidade, rastreabilidade e padronização. A solução permite liberação diretamente via computadores, smartphones e tablets, com registros em tempo real prontos para análise via Power BI. Com isso, aumentou-se a eficiência operacional, reduziu-se retrabalho e garantiu-se conformidade com os padrões de qualidade. O impacto foi tão positivo que <strong className="text-white"> a aplicação foi reconhecida mundialmente pela Michelin, tornando-se benchmark em todas as usinas de Reforços Metálicos da empresa.</strong></>), 
         stack: [{ name: "PowerApps" }, { name: "Power BI" },{ name: "Sharepoint" }],
-        imagem: "/assets/work/releasefunction.jpg",
+        imagem: "/assets/works/releasefunction.jpg",
         live: "",
         github: "",
     },
@@ -39,7 +39,7 @@ const projects = [
         description:
             "Aplicativo para gestão de equipamentos de incêndio com Microsoft Power Apps e Power BI, focado em inspeções, controle e análise em tempo real. A solução permite o cadastro e checklist digital dos equipamentos, registro de não conformidades, além de dashboards interativos para tomada de decisão. Todos os dados são armazenados em banco seguro e estruturado, garantindo segurança, rastreabilidade e alta disponibilidade da informação, substituindo processos manuais por uma gestão digital, eficiente e em conformidade com as normas de segurança.",
         stack: [{ name: "PowerApps" }, { name: "Power BI" },{ name: "Sharepoint" }],
-        imagem: "/assets/work/firetrack.png",
+        imagem: "/assets/works/firetrack.png",
         live: "https://www.linkedin.com/posts/jvitor-ribeiro_powerapps-powerbi-seguranaexadotrabalho-activity-7344179713789034496-a_w9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADgWFvoBtNHHxaysw4WvZRdEaGNTXiamsM4",
         github: "",
     },
@@ -50,7 +50,7 @@ const projects = [
         description:
             "Landing page responsiva desenvolvida com HTML, CSS e JavaScript, voltada para serviços de conserto de celulares e venda de acessórios. O layout é moderno, limpo e adaptável a dispositivos móveis. A página conta com seções como serviços oferecidos, lista dinâmica de acessórios, avaliações de clientes, formulário de contato e botão de WhatsApp com API. Também utiliza API de geolocalização para mostrar a loja mais próxima e API de clima para exibir a previsão local, trazendo um toque personalizado à experiência do usuário. Ideal para atrair clientes, facilitar o contato e divulgar produtos com interatividade e leveza..",
         stack: [{ name: "PowerApps" }, { name: "Power BI" },{ name: "Sharepoint" }],
-        imagem: "/assets/work/utidocelular.jpg",
+        imagem: "/assets/works/utidocelular.jpg",
         live: "",
         github: "",
     }, 
@@ -61,7 +61,7 @@ const projects = [
         description:
             "Desenvolvi um jogo RPG tático com foco em batalhas PvP por turno, narrativa envolvente e mecânicas profundas de progressão. O projeto conta com diferentes classes jogáveis, padrões de ataque variados para mobs, sistema de magias e itens com efeitos especiais. A jornada inclui missões primárias e secundárias, explorando um mundo rico em lore e desafios. Todo o enredo, sistemas e lógicas de combate foram desenvolvidos por mim, com a colaboração de Diogo Benevenuto na construção do level design. O resultado é uma experiência estratégica, imersiva e dinâmica, pensada para oferecer variedade, competitividade e rejogabilidade.",
         stack: [{ name: "Lógica de Programação" }, { name: "Smile Game Builder" }, { name: "Git" }],
-        imagem: "/assets/work/sgb.jpeg",     
+        imagem: "/assets/works/sgb.jpeg",     
         live: "https://diogo-benevenuto.itch.io/crystal-legends",
         github: "",
     },   
