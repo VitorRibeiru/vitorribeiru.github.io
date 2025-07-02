@@ -27,13 +27,13 @@ const ReviewCard = ({
 
     return (
         <div className="relative bg-zinc-800  p-5 rounded-xl flex flex-col lg:min-w-[420px] mb-5">  
-        <Link 
+        {href && (<Link 
                             href={href} 
                             className="absolute top-2 right-2 text-white text-2xl w-[50px] h-[50px] rounded-full bg-white 
                              transition-all duration-500 flex justify-center items-center hover:-rotate-45 m-6" target="_blank"
                           >
                             <BsArrowDownRight className="text-primary text-3xl " />
-                          </Link>
+                          </Link>)}
 
             <div className="flex items-center gap-2 mt-0 mb-0">
                 

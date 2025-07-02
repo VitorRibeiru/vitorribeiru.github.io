@@ -31,7 +31,7 @@ const info = [
     {
         icon: <FaMapMarkedAlt />,
         title: "Endereço",
-        description: "Cajamar, São Paulo.",
+        description: "Rio de Janeiro / São Paulo.",
     },
 ];
 
