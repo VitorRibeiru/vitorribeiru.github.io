@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const isGithubPages = process.env.DEPLOY_TARGET === 'GH_PAGES';
 
 const nextConfig = {
@@ -9,4 +8,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
