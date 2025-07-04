@@ -1,28 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion"
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/ui/WorkSliderBtns";
-
-const [animationEnded, setAnimationEnded] = useState(false);
-
-useEffect(() => {
-  // Após 3 segundos (ou quando sua animação terminar), some com a div
-  const timer = setTimeout(() => setAnimationEnded(true), 3000);
-  return () => clearTimeout(timer);
-}, []);
-
+import "swiper/css";
+import React, { useState } from "react";
+import { motion } from "framer-motion"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const projects = [
     {
@@ -97,6 +85,12 @@ const projects = [
     },
 ]
 const Work = () => {
+    const [animationEnded, setAnimationEnded] = useState(false);
+    useEffect(() => {
+    // Após 3 segundos (ou quando sua animação terminar), some com a div
+    const timer = setTimeout(() => setAnimationEnded(true), 3000);
+    return () => clearTimeout(timer);
+    }, []);
     const [project, setProject] = useState(projects[0]);
     const handleSlideChange = (swiper) => {
         //get current slide index
