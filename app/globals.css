@@ -1,91 +1,91 @@
-/* @tailwind base;
-@tailwind components; */
-@tailwind utilities;
+  /* @tailwind base;
+  @tailwind components; */
+  @tailwind utilities;
 
-@import "tailwindcss";
-@import "tw-animate-css";
+  @import "tailwindcss";
+  @import "tw-animate-css";
 
-@custom-variant dark (&:where(.dark, .dark *));
+  @custom-variant dark (&:where(.dark, .dark *));
 
-@layer components {
-  .container {
-    @apply mx-auto px-[15px];
-  }
-  .circle-animation {
-    stroke: #00ff99;
-    stroke-width: 4;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-}
-
-@theme {
-
-  /* Breakpoints personalizados */
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 960px;
-  --breakpoint-xl: 1200px;
-
-  /* Fonte personalizada */
-  --font-primary: "JetBrains Mono", monospace;
-
-  /* Cores personalizadas */
-  --color-primary: #1c1c22;
-  --color-accent: #00ff99;
-  --color-accent-hover: #00e187;
-
-  /* Animações personalizadas */
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
-
-  @keyframes accordion-down {
-    from {
-      height: 0;
+  @layer components {
+    .container {
+      @apply mx-auto px-[15px];
     }
-    to {
-      height: var(--radix-accordion-content-height);
+    .circle-animation {
+      stroke: #00ff99;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
+
   }
 
-  @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height);
+  @theme {
+
+    /* Breakpoints personalizados */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 960px;
+    --breakpoint-xl: 1200px;
+
+    /* Fonte personalizada */
+    --font-primary: "JetBrains Mono", monospace;
+
+    /* Cores personalizadas */
+    --color-primary: #1c1c22;
+    --color-accent: #00ff99;
+    --color-accent-hover: #00e187;
+
+    /* Animações personalizadas */
+    --animate-accordion-down: accordion-down 0.2s ease-out;
+    --animate-accordion-up: accordion-up 0.2s ease-out;
+
+    @keyframes accordion-down {
+      from {
+        height: 0;
+      }
+      to {
+        height: var(--radix-accordion-content-height);
+      }
     }
-    to {
-      height: 0;
+
+    @keyframes accordion-up {
+      from {
+        height: var(--radix-accordion-content-height);
+      }
+      to {
+        height: 0;
+      }
     }
+
   }
 
-}
-
-@layer base {
-  body {
-    @apply font-primary bg-primary text-white leading-loose;
-  }
-  .h1 {
-    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
-  }
-  .h2 {
-    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
-  }
-  .h3 {
-    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
-  }
+  @layer base {
+    body {
+      @apply font-primary bg-primary text-white leading-loose;
+    }
+    .h1 {
+      @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+    }
+    .h2 {
+      @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+    }
+    .h3 {
+      @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+    }
 
 
-}
-
-@layer utilities {
-  .text-outline {
-    color: transparent;
-    -webkit-text-stroke: 1px white;
   }
 
-  .group:hover .text-outline {
-    -webkit-text-stroke: 1px #00ff99; /* Muda só o contorno */
-  }
+  @layer utilities {
+    .text-outline {
+      color: transparent;
+      -webkit-text-stroke: 1px white;
+    }
 
-  
-}
+    .group:hover .text-outline {
+      -webkit-text-stroke: 1px #00ff99; /* Muda só o contorno */
+    }
+
+    
+  }

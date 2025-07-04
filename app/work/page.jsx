@@ -15,56 +15,86 @@ import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/ui/WorkSliderBtns";
 
+const [animationEnded, setAnimationEnded] = useState(false);
+
+useEffect(() => {
+  // Após 3 segundos (ou quando sua animação terminar), some com a div
+  const timer = setTimeout(() => setAnimationEnded(true), 3000);
+  return () => clearTimeout(timer);
+}, []);
+
+
 const projects = [
     {
         num: "01",
         category: "aplication",
         icon: (<FontAwesomeIcon icon={faInfoCircle} className="text-white text-lg mt-0.5" />),
         icondescription: (
-                <p className="relative text-[7px] mt-0.5">
-                     As imagens reais do projeto não podem ser exibidas devido às diretrizes de privacidade e confidencialidade exigidas pelo cliente, conforme as políticas LGP.
-                </p>
-                ),
+            <p className="relative text-[7px] mt-0.5">
+                As imagens reais do projeto não podem ser exibidas devido às diretrizes de privacidade e confidencialidade exigidas pelo cliente, conforme as políticas LGP.
+            </p>
+        ),
         title: "RELEASE FUNCTION",
-        description: (<>Aplicação desenvolvida com Power Apps e base de dados no SharePoint, que inovou o processo de controle, bloqueio e liberação de produtos da usina, trazendo mais segurança, agilidade, rastreabilidade e padronização. A solução permite liberação diretamente via computadores, smartphones e tablets, com registros em tempo real prontos para análise via Power BI. Com isso, aumentou-se a eficiência operacional, reduziu-se retrabalho e garantiu-se conformidade com os padrões de qualidade. O impacto foi tão positivo que <strong className="text-white"> a aplicação foi reconhecida mundialmente pela Michelin, tornando-se benchmark em todas as usinas de Reforços Metálicos da empresa.</strong></>), 
-        stack: [{ name: "PowerApps" }, { name: "Power BI" },{ name: "Sharepoint" }],
-        imagem: "./assets/projects/releasefunction.jpg",
+        description: (<>Aplicação desenvolvida com Power Apps e base de dados no SharePoint, que inovou o processo de controle, bloqueio e liberação de produtos da usina, trazendo mais segurança, agilidade, rastreabilidade e padronização. A solução permite liberação diretamente via computadores, smartphones e tablets, com registros em tempo real prontos para análise via Power BI. Com isso, aumentou-se a eficiência operacional, reduziu-se retrabalho e garantiu-se conformidade com os padrões de qualidade. O impacto foi tão positivo que <strong className="text-white"> a aplicação foi reconhecida mundialmente pela Michelin, tornando-se benchmark em todas as usinas de Reforços Metálicos da empresa.</strong></>),
+        stack: [{ name: "PowerApps" }, { name: "Power BI" }, { name: "Sharepoint" }],
+        imagem: "/assets/projects/releasefunction.jpg",
         live: "",
         github: "",
-    },
-    {
+    }, {
         num: "02",
-        category: "application/analysis",
-        title: "FIRETRACK",
+        title: "SWITCH ANALYSER",
+        category: "Automação",
+        icon: (<FontAwesomeIcon icon={faInfoCircle} className="text-white text-lg mt-0.5" />),
+        icondescription: (
+            <p className="relative text-[7px] mt-0.5">
+                As imagens reais do projeto não podem ser exibidas devido às diretrizes de privacidade e confidencialidade exigidas pelo cliente, conforme as políticas LGP.
+            </p>
+        ),
         description:
-            "Aplicativo para gestão de equipamentos de incêndio com Microsoft Power Apps e Power BI, focado em inspeções, controle e análise em tempo real. A solução permite o cadastro e checklist digital dos equipamentos, registro de não conformidades, além de dashboards interativos para tomada de decisão. Todos os dados são armazenados em banco seguro e estruturado, garantindo segurança, rastreabilidade e alta disponibilidade da informação, substituindo processos manuais por uma gestão digital, eficiente e em conformidade com as normas de segurança.",
-        stack: [{ name: "PowerApps" }, { name: "Power BI" },{ name: "Sharepoint" }],
-        imagem: "./assets/projects/firetrack.png",
-        live: "https://www.linkedin.com/posts/jvitor-ribeiro_powerapps-powerbi-seguranaexadotrabalho-activity-7344179713789034496-a_w9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADgWFvoBtNHHxaysw4WvZRdEaGNTXiamsM4",
+            "Desenvolvi uma automação em Python para análise e monitoramento de switches de rede. O sistema realiza web scraping para coletar informações dos dispositivos, realiza pings com códigos de verificação e retorna dados técnicos do switch. Após o tratamento e organização dessas informações, os resultados são integrados em um dashboard interativo no Power BI. O foco da análise está na detecção de erros, variações de temperatura e performance dos switches, com alertas configurados para identificar anomalias críticas. Essa solução facilita a tomada de decisão rápida e eficiente em ambientes de infraestrutura de rede.",
+        stack: [
+            { name: "Python" },
+            { name: "Web Scrapping" },
+            { name: "Automação" },
+            { name: "Power BI" }
+        ],
+        imagem: "/assets/projects/switch-monitor.jpeg",
+        live: "",
         github: "",
     },
     {
         num: "03",
+        category: "application/analysis",
+        title: "FIRETRACK",
+        description:
+            "Aplicativo para gestão de equipamentos de incêndio com Microsoft Power Apps e Power BI, focado em inspeções, controle e análise em tempo real. A solução permite o cadastro e checklist digital dos equipamentos, registro de não conformidades, além de dashboards interativos para tomada de decisão. Todos os dados são armazenados em banco seguro e estruturado, garantindo segurança, rastreabilidade e alta disponibilidade da informação, substituindo processos manuais por uma gestão digital, eficiente e em conformidade com as normas de segurança.",
+        stack: [{ name: "PowerApps" }, { name: "Power BI" }, { name: "Sharepoint" }],
+        imagem: "/assets/projects/firetrack.png",
+        live: "https://www.linkedin.com/posts/jvitor-ribeiro_powerapps-powerbi-seguranaexadotrabalho-activity-7344179713789034496-a_w9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADgWFvoBtNHHxaysw4WvZRdEaGNTXiamsM4",
+        github: "",
+    },
+    {
+        num: "04",
         category: "Landing Page",
         title: "UTI DO CELULAR",
         description:
             "Landing page responsiva desenvolvida com HTML, CSS e JavaScript, voltada para serviços de conserto de celulares e venda de acessórios. O layout é moderno, limpo e adaptável a dispositivos móveis. A página conta com seções como serviços oferecidos, lista dinâmica de acessórios, avaliações de clientes, formulário de contato e botão de WhatsApp com API. Também utiliza API de geolocalização para mostrar a loja mais próxima e API de clima para exibir a previsão local, trazendo um toque personalizado à experiência do usuário. Ideal para atrair clientes, facilitar o contato e divulgar produtos com interatividade e leveza..",
-        stack: [{ name: "PowerApps" }, { name: "Power BI" },{ name: "Sharepoint" }],
-        imagem: "./assets/projects/utidocelular.jpg",
+        stack: [{ name: "PowerApps" }, { name: "Power BI" }, { name: "Sharepoint" }],
+        imagem: "/assets/projects/utidocelular.jpg",
         live: "",
         github: "",
-    }, 
+    },
     {
-        num: "04",
+        num: "05",
         category: "Game",
         title: "CRYSTAL LEGENDS",
         description:
             "Desenvolvi um jogo RPG tático com foco em batalhas PvP por turno, narrativa envolvente e mecânicas profundas de progressão. O projeto conta com diferentes classes jogáveis, padrões de ataque variados para mobs, sistema de magias e itens com efeitos especiais. A jornada inclui missões primárias e secundárias, explorando um mundo rico em lore e desafios. Todo o enredo, sistemas e lógicas de combate foram desenvolvidos por mim, com a colaboração de Diogo Benevenuto na construção do level design. O resultado é uma experiência estratégica, imersiva e dinâmica, pensada para oferecer variedade, competitividade e rejogabilidade.",
         stack: [{ name: "Lógica de Programação" }, { name: "Smile Game Builder" }, { name: "Git" }],
-        imagem: "./assets/projects/sgb.jpeg",     
+        imagem: "/assets/projects/sgb.jpeg",
         live: "https://diogo-benevenuto.itch.io/crystal-legends",
         github: "",
-    },   
+    },
 ]
 const Work = () => {
     const [project, setProject] = useState(projects[0]);
@@ -78,8 +108,10 @@ const Work = () => {
     return (
         <motion.section
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: 'easeIn'},
-        }}
+            animate={{
+                opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' },
+            }}
+            exit={{ opacity: 0 }}
             className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
         >
             <div className="container mx-auto">
@@ -93,17 +125,17 @@ const Work = () => {
                              */}
                             <div className="text-7xl leading-none font-extrabold text-transparent text-outline mb-0">
                                 {project.title}
-                            </div>                                                                  
+                            </div>
                             {/* project category */}
                             <h2 className="text-[20px] font-bold leading-none text-white
                             group-hover:text-accent transition-all duration-500 capitalize">
-                                {project.category} project  
+                                {project.category} project
                             </h2>
-                                                        
+
                             {/* project description */}
                             <p className="text-white/60">{project.description}</p>
                             {/* stack */}
-                            <ul className="flex gap-4">
+                            <ul className="flex gap-4 flex flex-wrap gap-2 text-sm sm:text-base md:text-xl text-accent">
                                 {project.stack.map((item, index) => {
                                     return (
                                         <li key={index} className="text-xl text-accent">
@@ -122,40 +154,40 @@ const Work = () => {
 
 
                                 {/* live project button */}
-{project.live && (
-  <Link href={project.live} target="blank_">
-    <TooltipProvider delayDuration={100}>
-      <Tooltip>
-        <TooltipTrigger className="w-[70px] h-[70px] rounded-full
+                                {project.live && (
+                                    <Link href={project.live} target="blank_">
+                                        <TooltipProvider delayDuration={100}>
+                                            <Tooltip>
+                                                <TooltipTrigger className="w-[70px] h-[70px] rounded-full
           bg-white/5 flex justify-center items-center group">
-          <BsArrowUpRight className="text-white text-3xl
+                                                    <BsArrowUpRight className="text-white text-3xl
             group-hover:text-accent" />
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>Live Project</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  </Link>
-)}
+                                                </TooltipTrigger>
+                                                <TooltipContent>
+                                                    <p>Live Project</p>
+                                                </TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    </Link>
+                                )}
 
-{/* github project button */}
-{project.github && (
-  <Link href={project.github}>
-    <TooltipProvider delayDuration={100}>
-      <Tooltip>
-        <TooltipTrigger className="w-[70px] h-[70px] rounded-full
+                                {/* github project button */}
+                                {project.github && (
+                                    <Link href={project.github}>
+                                        <TooltipProvider delayDuration={100}>
+                                            <Tooltip>
+                                                <TooltipTrigger className="w-[70px] h-[70px] rounded-full
           bg-white/5 flex justify-center items-center group">
-          <BsGithub className="text-white text-3xl
+                                                    <BsGithub className="text-white text-3xl
             group-hover:text-accent" />
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>Github Repository</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  </Link>
-)}
+                                                </TooltipTrigger>
+                                                <TooltipContent>
+                                                    <p>Github Repository</p>
+                                                </TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    </Link>
+                                )}
 
                             </div>
                         </div>
@@ -184,14 +216,14 @@ const Work = () => {
                                                     alt=""
 
                                                 />
-                                                
+
                                             </div>
-                                            
+
                                         </div> {/* ICON INFO */}
-                            <h2 className="flex items-center gap-2">
-                            {project.icon}
-                            {project.icondescription}
-                            </h2>
+                                        <h2 className="flex items-center gap-2">
+                                            {project.icon}
+                                            {project.icondescription}
+                                        </h2>
                                     </SwiperSlide>
                                 );
                             })}

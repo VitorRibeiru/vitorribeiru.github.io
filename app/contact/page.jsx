@@ -157,8 +157,7 @@ const Contact = () => {
                             </form>
                         </div>
                         {/* info */}
-                        <div className="flex-1 flex items-center xl:justify-end order-1 
-                    xl:order-none mb-8 xl:mb-0">
+                        <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
                             <ul className="flex flex-col gap-10">
                                 {info.map((item, index) => {
                                     return <li key={index} className="flex items-center gap-6">
@@ -167,7 +166,7 @@ const Contact = () => {
                                         </div>
                                         <div className="flex-1">
                                             <p className="text-white/60">{item.title}</p>
-                                            <h3 className="text-xl">{item.description}</h3>
+                                            <h3 className="text-[14px] sm:text-xl">{item.description}</h3>
                                         </div>
                                     </li>
                                 })}
