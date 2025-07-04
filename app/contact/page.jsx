@@ -146,8 +146,7 @@ const Contact = () => {
                     </ul>
                 </div>
             </div>
-        </div>
-        </motion.section >
+            </motion.section >
     );
 };
 
