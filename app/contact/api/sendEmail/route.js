@@ -1,4 +1,5 @@
-import nodemailer from 'nodemailer';
+// app/api/sendEmail/route.js
+import nodemailer from "nodemailer";
 
 export async function POST(request) {
   const { firstname, lastname, email, phone, service, message } = await request.json();
