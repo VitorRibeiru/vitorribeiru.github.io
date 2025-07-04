@@ -1,14 +1,19 @@
+// pages/api/sendEmail.js
 import nodemailer from "nodemailer";
 
-export async function POST(request) {
-  const { firstname, lastname, email, phone, service, message } = await request.json();
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).end("Método não permitido");
+  }
+
+  const { firstname, lastname, email, phone, service, message } = req.body;
 
   if (!firstname || !email || !message) {
-    return new Response(JSON.stringify({ error: 'Campos obrigatórios ausentes.' }), { status: 400 });
+    return res.status(400).json({ error: "Campos obrigatórios ausentes." });
   }
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
@@ -31,9 +36,9 @@ export async function POST(request) {
       `,
     });
 
-    return new Response(JSON.stringify({ success: true }), { status: 200 });
+    return res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Erro ao enviar e-mail:', error);
-    return new Response(JSON.stringify({ error: 'Erro ao enviar e-mail.' }), { status: 500 });
+    console.error("Erro ao enviar e-mail:", error);
+    return res.status(500).json({ error: "Erro ao enviar e-mail." });
   }
 }

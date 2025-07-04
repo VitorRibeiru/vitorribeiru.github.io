@@ -104,11 +104,11 @@ const Contact = () => {
                                 <SelectContent>
                                     <SelectGroup>
                                         <SelectLabel>Selecione o serviço</SelectLabel>
-                                        <SelectItem value="ast">Aulas de Programação/BI</SelectItem>
-                                        <SelectItem value="bst">Business Inteligence</SelectItem>
-                                        <SelectItem value="cst">Web Development</SelectItem>
-                                        <SelectItem value="dst">Automação de Processos</SelectItem>
-                                        <SelectItem value="est">Outros</SelectItem>
+                                        <SelectItem value="Aulas de Programação/BI">Aulas de Programação/BI</SelectItem>
+                                        <SelectItem value="Business Inteligence">Business Inteligence</SelectItem>
+                                        <SelectItem value="Web Development">Web Development</SelectItem>
+                                        <SelectItem value="Automação de Processos">Automação de Processos</SelectItem>
+                                        <SelectItem value="Outros">Outros</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
