@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/ui/WorkSliderBtns";
 import "swiper/css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
