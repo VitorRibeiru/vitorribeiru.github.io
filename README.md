@@ -26,7 +26,7 @@ Este é meu portfólio profissional desenvolvido com **React** e **JavaScript**,
 - Layout responsivo para dispositivos móveis
 
 ## 🛠️ Acesse
+[JVRIBEIRO.COM](https://jvribeiro.com)
 
-jvribeiro.com
 
 
