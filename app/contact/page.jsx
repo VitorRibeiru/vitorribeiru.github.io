@@ -35,59 +35,10 @@ const info = [
     },
 ];
 
-const Contact = () => {
-    const [formData, setFormData] = useState({
-        firstname: "",
-        lastname: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
-    });
 
-    const handleChange = (field) => (e) => {
-        setFormData((prev) => ({ ...prev, [field]: e.target?.value ?? e }));
-    };
-
-    const handleFormSubmit = async (e) => {
-        e.preventDefault();
-
-        const { firstname, lastname, email, phone, service, message } = formData;
-
-        if (!firstname || !lastname || !email || !phone || !service || !message) {
-            alert("Por favor, preencha todos os campos.");
-            return;
-        }
-
-        try {
-            const result = await emailjs.send(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-                {
-                    ...formData,
-                    time: new Date().toLocaleString("pt-BR"),/*  */
-                },
-                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-            );
-
-            console.log("Email enviado:", result);
-            alert("Mensagem enviada com sucesso!");
-
-            setFormData({
-                firstname: "",
-                lastname: "",
-                email: "",
-                phone: "",
-                service: "",
-                message: "",
-            });
-        } catch (error) {
-            console.error("Erro ao enviar:", error);
-            alert("Erro ao enviar. Verifique seus dados ou tente novamente.");
-        }
-    };
-
-    return (
+const Contact = () => {    
+     const [selectedService, setSelectedService] = useState("");
+     return (
         <motion.section
             initial={{ opacity: 0 }}
             animate={{
@@ -100,8 +51,7 @@ const Contact = () => {
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     {/* form */}
                     <div className="xl:w-[54%] order-2 xl:order-none">
-                        <form
-                            onSubmit={handleFormSubmit}
+                        <form action="https://getform.io/f/aqomzwda" method="POST"
                             className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
                         >
                             <h3 className="text-4xl text-accent">Tire a ideia do papel</h3>
@@ -116,34 +66,27 @@ const Contact = () => {
                                 <Input
                                     type="text"
                                     placeholder="Nome"
-                                    value={formData.firstname}
-                                    onChange={handleChange("firstname")}
+                                    name="Nome"
                                 />
                                 <Input
                                     type="text"
                                     placeholder="Sobrenome"
-                                    value={formData.lastname}
-                                    onChange={handleChange("lastname")}
+                                    name="Sobrenome"
                                 />
                                 <Input
                                     type="email"
                                     placeholder="Email"
-                                    value={formData.email}
-                                    onChange={handleChange("email")}
+                                    name="Email"
                                 />
                                 <Input
                                     type="tel"
                                     placeholder="Contato"
-                                    value={formData.phone}
-                                    onChange={handleChange("phone")}
+                                    name="Contato"
                                 />
                             </div>
 
                             <Select
-                                value={formData.service}
-                                onValueChange={(value) =>
-                                    setFormData((prev) => ({ ...prev, service: value }))
-                                }
+                                value={selectedService} onValueChange={setSelectedService}
                             >
                                 <SelectTrigger className="w-full">
                                     <SelectValue placeholder="Selecione o serviço" />
@@ -151,19 +94,19 @@ const Contact = () => {
                                 <SelectContent>
                                     <SelectGroup>
                                         <SelectLabel>Selecione o serviço</SelectLabel>
-                                        <SelectItem value="Aulas de Programação/BI">
+                                        <SelectItem value="Aulas de Programação/BI" name="Aulas de Programação/BI">
                                             Aulas de Programação/BI
                                         </SelectItem>
-                                        <SelectItem value="Business Inteligence">
+                                        <SelectItem value="Business Inteligence" nae="Business Inteligence">
                                             Business Inteligence
                                         </SelectItem>
-                                        <SelectItem value="Web Development">
+                                        <SelectItem value="Web Development" name="Web Development">
                                             Web Development
                                         </SelectItem>
-                                        <SelectItem value="Automação de Processos">
+                                        <SelectItem value="Automação de Processos" name="Automação de Processos">
                                             Automação de Processos
                                         </SelectItem>
-                                        <SelectItem value="Outros">Outros</SelectItem>
+                                        <SelectItem value="Outros" name="Outros">Outros</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
@@ -171,8 +114,7 @@ const Contact = () => {
                             <Textarea
                                 className="h-[200px]"
                                 placeholder="Escreva sua mensagem aqui."
-                                value={formData.message}
-                                onChange={handleChange("message")}
+                                name="message"
                             />
 
                             <Button type="submit" size="md" className="max-w-40 h-[50px]">
