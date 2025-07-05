@@ -46,7 +46,7 @@ const projects = [
             { name: "Automação" },
             { name: "Power BI" }
         ],
-        imagem: "/assets/projects/switch-monitor.jpeg",
+        imagem: "/assets/projects/switches.png",
         live: "",
         github: "",
     },
