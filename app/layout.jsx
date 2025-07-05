@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">  
       <head>
+        <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
           rel="stylesheet"
