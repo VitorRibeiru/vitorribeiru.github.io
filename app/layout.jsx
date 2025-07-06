@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Nav from "@/components/Nav";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import Script from "next/script";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -27,15 +28,20 @@ export default function RootLayout({ children }) {
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
           rel="stylesheet"
-        />  
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M9HBZJLDB0"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
-
-          gtag('config', 'G-M9HBZJLDB0');
-        </script>      
+        />    
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-M9HBZJLDB0"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-M9HBZJLDB0');
+          `}
+        </Script> 
       </head>
       <body className={jetbrainsMono.variable}>
         <Header />
